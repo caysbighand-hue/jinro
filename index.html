@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>천안여자상업고등학교 진로진학 안내</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family:
+        "Noto Sans KR",
+        "Malgun Gothic",
+        Arial,
+        sans-serif;
+      background: #f5f7fb;
+      color: #263449;
+      line-height: 1.7;
+    }
+
+    .container {
+      width: min(92%, 900px);
+      margin: 0 auto;
+    }
+
+    /* 상단 제목 */
+    header {
+      background: white;
+      padding: 55px 20px 40px;
+      text-align: center;
+      border-bottom: 1px solid #e4e8ef;
+    }
+
+    .school-name {
+      margin-bottom: 12px;
+      color: #172b4d;
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+    }
+
+    h1 {
+      margin: 0;
+      color: #102a56;
+      font-size: clamp(2rem, 6vw, 3.2rem);
+      line-height: 1.25;
+      letter-spacing: -0.04em;
+    }
+
+    .subtitle {
+      margin-top: 18px;
+      color: #68758a;
+      font-size: 1.05rem;
+    }
+
+    /* 메인 */
+    main {
+      padding: 35px 0 60px;
+    }
+
+    section {
+      margin-bottom: 30px;
+    }
+
+    .welcome {
+      background: white;
+      padding: 30px;
+      border-radius: 18px;
+      box-shadow: 0 5px 20px rgba(20, 40, 70, 0.06);
+    }
+
+    .section-title {
+      margin: 0 0 18px;
+      color: #102a56;
+      font-size: 1.55rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+    }
+
+    .welcome p {
+      margin: 0;
+      font-size: 1.08rem;
+      color: #445268;
+    }
+
+    /* 일정 */
+    .schedule-list {
+      display: grid;
+      gap: 16px;
+    }
+
+    .schedule {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      background: white;
+      padding: 22px;
+      border-radius: 16px;
+      box-shadow: 0 5px 20px rgba(20, 40, 70, 0.06);
+    }
+
+    .date {
+      flex: 0 0 82px;
+      text-align: center;
+      background: #102a56;
+      color: white;
+      border-radius: 12px;
+      padding: 10px 5px;
+    }
+
+    .date .month {
+      display: block;
+      font-size: 0.85rem;
+      opacity: 0.85;
+    }
+
+    .date .day {
+      display: block;
+      font-size: 1.8rem;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+
+    .schedule-content {
+      flex: 1;
+    }
+
+    .schedule-content h3 {
+      margin: 0 0 5px;
+      color: #172b4d;
+      font-size: 1.2rem;
+    }
+
+    .schedule-content p {
+      margin: 0;
+      color: #68758a;
+      font-size: 0.98rem;
+    }
+
+    /* 하단 */
+    footer {
+      padding: 25px 20px 35px;
+      text-align: center;
+      color: #7b8798;
+      font-size: 0.9rem;
+    }
+
+    /* 스마트폰 */
+    @media (max-width: 600px) {
+
+      header {
+        padding: 42px 15px 32px;
+      }
+
+      main {
+        padding: 25px 0 40px;
+      }
+
+      .welcome {
+        padding: 24px 20px;
+      }
+
+      .section-title {
+        font-size: 1.35rem;
+      }
+
+      .welcome p {
+        font-size: 1rem;
+      }
+
+      .schedule {
+        padding: 18px;
+        gap: 14px;
+      }
+
+      .date {
+        flex-basis: 68px;
+        padding: 8px 4px;
+      }
+
+      .date .day {
+        font-size: 1.55rem;
+      }
+
+      .schedule-content h3 {
+        font-size: 1.05rem;
+      }
+
+      .schedule-content p {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container">
+      <div class="school-name">천안여자상업고등학교</div>
+
+      <h1>진로진학 안내</h1>
+
+      <div class="subtitle">
+        나의 진로를 찾고, 미래를 준비하는 시간
+      </div>
+    </div>
+  </header>
+
+
+  <main>
+    <div class="container">
+
+      <!-- 환영 인사 -->
+      <section class="welcome">
+        <h2 class="section-title">진로진학부에서 알려드립니다</h2>
+
+        <p>
+          안녕하세요. 천안여자상업고등학교 진로진학부입니다.
+          여러분이 자신의 적성과 흥미를 바탕으로 진로를 설계하고,
+          원하는 대학과 직업을 향해 한 걸음씩 나아갈 수 있도록
+          진로진학부가 함께하겠습니다. 진학과 취업에 관한 다양한
+          정보를 확인하고, 여러분에게 맞는 미래를 차근차근 준비해 보세요.
+        </p>
+      </section>
+
+
+      <!-- 이번 달 일정 -->
+      <section>
+        <h2 class="section-title">이번 달 진학 일정</h2>
+
+        <div class="schedule-list">
+
+          <!-- 일정 1 -->
+          <div class="schedule">
+            <div class="date">
+              <span class="month">8월</span>
+              <span class="day">31</span>
+            </div>
+
+            <div class="schedule-content">
+              <h3>2027학년도 대학입시 설명회</h3>
+              <p>
+                3학년 학생 대상 대학입시 전형 및 지원 전략 안내
+              </p>
+            </div>
+          </div>
+
+
+          <!-- 일정 2 -->
+          <div class="schedule">
+            <div class="date">
+              <span class="month">9월</span>
+              <span class="day">5</span>
+            </div>
+
+            <div class="schedule-content">
+              <h3>수시모집 원서접수 상담</h3>
+              <p>
+                학생별 희망 대학·학과를 중심으로 수시 지원 상담 진행
+              </p>
+            </div>
+          </div>
+
+
+          <!-- 일정 3 -->
+          <div class="schedule">
+            <div class="date">
+              <span class="month">9월</span>
+              <span class="day">12</span>
+            </div>
+
+            <div class="schedule-content">
+              <h3>진로진학 1:1 상담주간</h3>
+              <p>
+                대학 진학 및 취업 등 학생별 진로 방향 상담
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+
+  <footer>
+    천안여자상업고등학교 진로진학부
+  </footer>
+
+</body>
+</html>
