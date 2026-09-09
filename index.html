@@ -1,298 +1,229 @@
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>천안여자상업고등학교 진로진학 안내</title>
-
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family:
-        "Noto Sans KR",
-        "Malgun Gothic",
-        Arial,
-        sans-serif;
-      background: #f5f7fb;
-      color: #263449;
-      line-height: 1.7;
-    }
-
-    .container {
-      width: min(92%, 900px);
-      margin: 0 auto;
-    }
-
-    /* 상단 제목 */
-    header {
-      background: white;
-      padding: 55px 20px 40px;
-      text-align: center;
-      border-bottom: 1px solid #e4e8ef;
-    }
-
-    .school-name {
-      margin-bottom: 12px;
-      color: #172b4d;
-      font-size: 1.05rem;
-      font-weight: 700;
-      letter-spacing: 0.03em;
-    }
-
-    h1 {
-      margin: 0;
-      color: #102a56;
-      font-size: clamp(2rem, 6vw, 3.2rem);
-      line-height: 1.25;
-      letter-spacing: -0.04em;
-    }
-
-    .subtitle {
-      margin-top: 18px;
-      color: #68758a;
-      font-size: 1.05rem;
-    }
-
-    /* 메인 */
-    main {
-      padding: 35px 0 60px;
-    }
-
-    section {
-      margin-bottom: 30px;
-    }
-
-    .welcome {
-      background: white;
-      padding: 30px;
-      border-radius: 18px;
-      box-shadow: 0 5px 20px rgba(20, 40, 70, 0.06);
-    }
-
-    .section-title {
-      margin: 0 0 18px;
-      color: #102a56;
-      font-size: 1.55rem;
-      font-weight: 800;
-      letter-spacing: -0.03em;
-    }
-
-    .welcome p {
-      margin: 0;
-      font-size: 1.08rem;
-      color: #445268;
-    }
-
-    /* 일정 */
-    .schedule-list {
-      display: grid;
-      gap: 16px;
-    }
-
-    .schedule {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      background: white;
-      padding: 22px;
-      border-radius: 16px;
-      box-shadow: 0 5px 20px rgba(20, 40, 70, 0.06);
-    }
-
-    .date {
-      flex: 0 0 82px;
-      text-align: center;
-      background: #102a56;
-      color: white;
-      border-radius: 12px;
-      padding: 10px 5px;
-    }
-
-    .date .month {
-      display: block;
-      font-size: 0.85rem;
-      opacity: 0.85;
-    }
-
-    .date .day {
-      display: block;
-      font-size: 1.8rem;
-      font-weight: 800;
-      line-height: 1.2;
-    }
-
-    .schedule-content {
-      flex: 1;
-    }
-
-    .schedule-content h3 {
-      margin: 0 0 5px;
-      color: #172b4d;
-      font-size: 1.2rem;
-    }
-
-    .schedule-content p {
-      margin: 0;
-      color: #68758a;
-      font-size: 0.98rem;
-    }
-
-    /* 하단 */
-    footer {
-      padding: 25px 20px 35px;
-      text-align: center;
-      color: #7b8798;
-      font-size: 0.9rem;
-    }
-
-    /* 스마트폰 */
-    @media (max-width: 600px) {
-
-      header {
-        padding: 42px 15px 32px;
-      }
-
-      main {
-        padding: 25px 0 40px;
-      }
-
-      .welcome {
-        padding: 24px 20px;
-      }
-
-      .section-title {
-        font-size: 1.35rem;
-      }
-
-      .welcome p {
-        font-size: 1rem;
-      }
-
-      .schedule {
-        padding: 18px;
-        gap: 14px;
-      }
-
-      .date {
-        flex-basis: 68px;
-        padding: 8px 4px;
-      }
-
-      .date .day {
-        font-size: 1.55rem;
-      }
-
-      .schedule-content h3 {
-        font-size: 1.05rem;
-      }
-
-      .schedule-content p {
-        font-size: 0.9rem;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>꿈꾸는 학교 프로그램 신청</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#f4f7fb;color:#172033;font-family:Arial,"Noto Sans KR",sans-serif}
+.wrap{max-width:720px;margin:auto;padding:20px 14px 50px}
+.hero{background:#142a4a;color:#fff;border-radius:22px;padding:28px 22px;margin-bottom:16px}
+.hero h1{margin:0 0 12px;font-size:28px}
+.hero p{margin:6px 0;line-height:1.6}
+.card{background:#fff;border-radius:18px;padding:20px;margin:14px 0;box-shadow:0 3px 15px rgba(20,42,74,.07)}
+label{display:block;font-weight:700;margin-bottom:8px}
+input{width:100%;padding:14px;border:1px solid #d5dbe5;border-radius:10px;font-size:16px}
+.program-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.program{border:1px solid #d5dbe5;border-radius:12px;padding:14px;cursor:pointer}
+.program.disabled{opacity:.45;cursor:not-allowed;background:#f3f4f6}
+.program input{width:auto;margin-right:7px}
+.name{font-weight:700}
+.remain{font-size:13px;color:#637083;margin-top:5px}
+button{width:100%;padding:16px;border:0;border-radius:12px;background:#1769e0;color:#fff;font-size:17px;font-weight:700;cursor:pointer}
+button:disabled{background:#aab4c3;cursor:not-allowed}
+.notice{padding:13px;border-radius:10px;background:#fff6d9;color:#6b5200;line-height:1.5}
+.success{background:#e8f7ed;color:#145c2d}
+.error{background:#fdebec;color:#8c2029}
+.countdown{text-align:center;font-size:19px;font-weight:700;padding:10px}
+.small{font-size:13px;color:#6b7483;line-height:1.5}
+.hidden{display:none}
+.result{font-size:18px;line-height:1.8}
+@media(max-width:520px){.program-grid{grid-template-columns:1fr}.hero h1{font-size:24px}}
+</style>
 </head>
-
 <body>
+<div class="wrap">
+  <section class="hero">
+    <h1 id="eventName">꿈꾸는 학교</h1>
+    <p id="eventInfo"></p>
+    <p>신청 시작: <strong>2026년 9월 11일 오전 8시 30분</strong></p>
+  </section>
 
-  <header>
-    <div class="container">
-      <div class="school-name">천안여자상업고등학교</div>
+  <div id="countdown" class="card countdown"></div>
+  <div id="message" class="hidden card"></div>
 
-      <h1>진로진학 안내</h1>
+  <section id="applicationSection" class="card">
+    <h2>프로그램 신청</h2>
+    <p class="small">학생 1명당 1개 프로그램만 신청할 수 있습니다. 선착순으로 마감됩니다.</p>
 
-      <div class="subtitle">
-        나의 진로를 찾고, 미래를 준비하는 시간
-      </div>
+    <div class="card">
+      <label for="studentNumber">학번</label>
+      <input id="studentNumber" inputmode="numeric" maxlength="5" placeholder="예: 10101">
+      <p class="small">1학년 1반 1번 → 10101</p>
     </div>
-  </header>
 
-
-  <main>
-    <div class="container">
-
-      <!-- 환영 인사 -->
-      <section class="welcome">
-        <h2 class="section-title">진로진학부에서 알려드립니다</h2>
-
-        <p>
-          안녕하세요. 천안여자상업고등학교 진로진학부입니다.
-          여러분이 자신의 적성과 흥미를 바탕으로 진로를 설계하고,
-          원하는 대학과 직업을 향해 한 걸음씩 나아갈 수 있도록
-          진로진학부가 함께하겠습니다. 진학과 취업에 관한 다양한
-          정보를 확인하고, 여러분에게 맞는 미래를 차근차근 준비해 보세요.
-        </p>
-      </section>
-
-
-      <!-- 이번 달 일정 -->
-      <section>
-        <h2 class="section-title">이번 달 진학 일정</h2>
-
-        <div class="schedule-list">
-
-          <!-- 일정 1 -->
-          <div class="schedule">
-            <div class="date">
-              <span class="month">8월</span>
-              <span class="day">31</span>
-            </div>
-
-            <div class="schedule-content">
-              <h3>2027학년도 대학입시 설명회</h3>
-              <p>
-                3학년 학생 대상 대학입시 전형 및 지원 전략 안내
-              </p>
-            </div>
-          </div>
-
-
-          <!-- 일정 2 -->
-          <div class="schedule">
-            <div class="date">
-              <span class="month">9월</span>
-              <span class="day">5</span>
-            </div>
-
-            <div class="schedule-content">
-              <h3>수시모집 원서접수 상담</h3>
-              <p>
-                학생별 희망 대학·학과를 중심으로 수시 지원 상담 진행
-              </p>
-            </div>
-          </div>
-
-
-          <!-- 일정 3 -->
-          <div class="schedule">
-            <div class="date">
-              <span class="month">9월</span>
-              <span class="day">12</span>
-            </div>
-
-            <div class="schedule-content">
-              <h3>진로진학 1:1 상담주간</h3>
-              <p>
-                대학 진학 및 취업 등 학생별 진로 방향 상담
-              </p>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
+    <div class="card">
+      <label for="studentName">이름</label>
+      <input id="studentName" maxlength="30" placeholder="이름을 입력하세요">
     </div>
-  </main>
 
+    <div class="card">
+      <label>프로그램 선택</label>
+      <div id="programs" class="program-grid"></div>
+    </div>
 
-  <footer>
-    천안여자상업고등학교 진로진학부
-  </footer>
+    <button id="submitBtn" onclick="submitApplication()" disabled>신청하기</button>
+  </section>
 
+  <section class="card">
+    <h2>내 신청 확인</h2>
+    <input id="checkNumber" inputmode="numeric" maxlength="5" placeholder="학번 5자리">
+    <br><br>
+    <button onclick="findApplication()">신청 내역 확인</button>
+    <div id="checkResult" class="result" style="margin-top:15px"></div>
+  </section>
+</div>
+
+<script>
+let appData = null;
+
+function load() {
+  google.script.run.withSuccessHandler(render).getPublicData();
+}
+
+function render(data) {
+  appData = data;
+  document.getElementById('eventName').textContent = data.eventName;
+  document.getElementById('eventInfo').textContent = data.eventDate + ' · ' + data.eventTime;
+  renderPrograms();
+
+  if (!data.isOpen) {
+    document.getElementById('submitBtn').disabled = true;
+    startCountdown(new Date(data.openAt));
+  } else {
+    document.getElementById('countdown').innerHTML = '현재 신청 가능합니다.';
+    document.getElementById('submitBtn').disabled = false;
+  }
+}
+
+function renderPrograms() {
+  const box = document.getElementById('programs');
+  box.innerHTML = '';
+
+  appData.programs.forEach((p, i) => {
+    const div = document.createElement('label');
+    div.className = 'program' + (p.closed ? ' disabled' : '');
+    div.innerHTML =
+      '<input type="radio" name="program" value="' + escapeHtml(p.name) + '"' +
+      (p.closed ? ' disabled' : '') + '>' +
+      '<span class="name">' + escapeHtml(p.name) + '</span>' +
+      '<div class="remain">' +
+      (p.closed ? '정원 마감' : '잔여 ' + p.remaining + '명 / 정원 ' + p.capacity + '명') +
+      '</div>';
+    box.appendChild(div);
+  });
+}
+
+function startCountdown(openAt) {
+  const box = document.getElementById('countdown');
+  function tick() {
+    const diff = openAt.getTime() - Date.now();
+    if (diff <= 0) {
+      box.innerHTML = '신청 시간이 되었습니다. 신청 정보를 불러오는 중...';
+      load();
+      return;
+    }
+    const sec = Math.floor(diff / 1000);
+    const h = Math.floor(sec / 3600);
+    const m = Math.floor((sec % 3600) / 60);
+    const s = sec % 60;
+    box.textContent = '신청 시작까지 ' + h + '시간 ' + String(m).padStart(2,'0') + '분 ' + String(s).padStart(2,'0') + '초';
+    setTimeout(tick, 1000);
+  }
+  tick();
+}
+
+function submitApplication() {
+  const studentNumber = document.getElementById('studentNumber').value.trim();
+  const studentName = document.getElementById('studentName').value.trim();
+  const selected = document.querySelector('input[name="program"]:checked');
+
+  if (!/^\d{5}$/.test(studentNumber)) {
+    showMessage('학번은 5자리 숫자로 입력해 주세요.', 'error');
+    return;
+  }
+  if (!studentName) {
+    showMessage('이름을 입력해 주세요.', 'error');
+    return;
+  }
+  if (!selected) {
+    showMessage('프로그램을 선택해 주세요.', 'error');
+    return;
+  }
+
+  const btn = document.getElementById('submitBtn');
+  btn.disabled = true;
+  btn.textContent = '신청 처리 중...';
+
+  google.script.run
+    .withSuccessHandler(function(result) {
+      if (result.ok) {
+        showMessage(
+          '<strong>신청이 완료되었습니다.</strong><br><br>' +
+          '학번: ' + escapeHtml(result.studentNumber) + '<br>' +
+          '이름: ' + escapeHtml(result.studentName) + '<br>' +
+          '프로그램: <strong>' + escapeHtml(result.program) + '</strong>',
+          'success'
+        );
+        document.getElementById('applicationSection').classList.add('hidden');
+        load();
+      } else {
+        showMessage(result.message, 'error');
+        btn.disabled = false;
+        btn.textContent = '신청하기';
+        load();
+      }
+    })
+    .withFailureHandler(function(err) {
+      showMessage('신청 처리 중 오류가 발생했습니다. 다시 시도해 주세요.', 'error');
+      btn.disabled = false;
+      btn.textContent = '신청하기';
+    })
+    .submitApplication({
+      studentNumber: studentNumber,
+      studentName: studentName,
+      program: selected.value
+    });
+}
+
+function findApplication() {
+  const number = document.getElementById('checkNumber').value.trim();
+  const resultBox = document.getElementById('checkResult');
+  resultBox.textContent = '확인 중...';
+
+  google.script.run.withSuccessHandler(function(result) {
+    if (result.ok) {
+      resultBox.innerHTML =
+        '<div class="success card">' +
+        '<strong>신청 내역</strong><br>' +
+        '학번: ' + escapeHtml(result.studentNumber) + '<br>' +
+        '이름: ' + escapeHtml(result.studentName) + '<br>' +
+        '프로그램: <strong>' + escapeHtml(result.program) + '</strong>' +
+        '</div>';
+    } else {
+      resultBox.innerHTML = '<div class="error card">' + escapeHtml(result.message) + '</div>';
+    }
+  }).findMyApplication(number);
+}
+
+function showMessage(text, type) {
+  const box = document.getElementById('message');
+  box.className = 'card ' + type;
+  box.innerHTML = text;
+  box.classList.remove('hidden');
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, function(m) {
+    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m];
+  });
+}
+
+load();
+setInterval(load, 30000);
+</script>
 </body>
 </html>
